@@ -1,3 +1,3 @@
 export default function handler(request, response) {
-  console.log(request);
+  response.status(200)
 }
