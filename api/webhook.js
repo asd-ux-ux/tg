@@ -1,4 +1,4 @@
 export default function handler(request, response) {
   response.status(200);
-  response.send(request.message.statusCode);
+  response.send(request.statusCode);
 }
