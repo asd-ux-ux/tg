@@ -1,6 +1,12 @@
 export default function handler(request, response) {
   response.status(200);
-  console.log(request);
-  response.send(request.statusCode);
-  alert('asd')
+  
+  let data = '';
+  req.on('data', chunk => {
+    data += chunk;
+  });
+  req.on('end', () => {
+    response.send(JSON.parse(data));
+    res.end();
+  });
 }
